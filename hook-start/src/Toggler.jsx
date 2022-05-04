@@ -1,27 +1,21 @@
-import React,{useState} from 'react'
+
+import UseToggle from './hooks/UseToggle';
 
 function Toggler() {
-    const [isHappy,setIsHappy]=useState(false);
+    const [isHappy,doToggle]=UseToggle(false);
     //adding second toggler here
-    const [isApple, setIsApple]= useState(true);
-    const setHappy=()=>
-    {
-
-        setIsHappy(!isHappy);
-    }
-    const setFruit=()=>
-    {
-        setIsApple(!isApple);
-    }
+    const [isApple,setdoToggle]= UseToggle(true);
   return (
-    <div><h1 onClick={setHappy}>
+    <div><h1 onClick={doToggle}>
     {isHappy? '😂': '😬'}
 
     </h1>
-    <h2 onClick={setFruit}>
+    <h2 onClick={setdoToggle}>
         {isApple? '🍎': '🍌'}
     </h2></div>
   )
 }
 
 export default Toggler
+
+//so look how clunky the code is, and how much repeated things are there we can do better than this!!!
