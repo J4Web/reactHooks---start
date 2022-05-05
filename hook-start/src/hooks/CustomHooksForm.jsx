@@ -15,4 +15,4 @@ function CustomHooksForm(initialVal='')
     }
     return [val,handleChange,refresh,backToTheInitial];
 }
-export {CustomHooksForm}
+export {CustomHooksForm};
